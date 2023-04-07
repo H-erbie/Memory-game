@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <section class="section-container">
+        <article class="app-head">
+          <!-- <h1 class="app-name">Memory Game</h1> -->
+          <div class="countDown"></div>
+          <div class="stat">
+            <span>Score:</span>
+            <span class="score"></span>
+            <span><button class="btn">Reset</button></span>
+          </div>
+        </article>
+        <article class="app-body">
+          <div class="imgs"></div>
+        </article>
+        <div class="overlay">
+          <div class="game">
+            <h2>Instructions</h2>
+            <p>
+              Hey there! Find the matching cards and take them all out in 2 minutes.
+            </p>
+            <br />
+            <p>Let's see how many you can take out</p>
+            <br />
+            <p>Click on Play to start</p>
+            <br />
+            <button class="btn">Play</button>
+          </div>
+          <div class="game-over">
+            
+            <h2>Game Over, Chale. You Suck!!</h2>
+            <span id="totalScore"></span>
+            <br>
+            <button class="btn">Play Again?</button>
+            
+          </div>
+          <div class="you-win">
+            <p class="toSpare"></p>
+            <p>Admit it, that sure was a close one😄 <br>
+            Glad you made it!</p>
+            <br>
+            <span id="totalScore"></span>
+            <p>Here's your trophy <br><span class="trophy">🏆</span> </p>
+            <br>
+            <button class="btn">Play Again?</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

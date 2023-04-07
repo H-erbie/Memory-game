@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(182, 243, 182);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.app-container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.app-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20%;
+}
+.app-name {
+  font-size: 2rem;
+}
+.stat {
+  font-size: 1.5rem;
+  color: rgb(16, 124, 88);
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countDown {
+  font-size: 2rem;
+  font-weight: bold;
+  height: 3rem;
+  width: max-content;
+}
+.app-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 90%;
+  height: 80%;
+}
+.imgs img {
+  min-width: 102px;
+  min-height: 102px;
+  max-height: 102px;
+  max-width: 102px;
+  background: lightgray;
+  cursor: pointer;
+  display: block;
+  border-radius: 0.3rem;
+}
+.overlay {
+  top: 0;
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.game,
+.game-over,
+.you-win {
+  width: 55%;
+  font-size: 1.5rem;
+  color: lightgray;
+  text-align: center;
+}
+.game h2,
+#totalScore {
+  color: gray;
+}
+.btn {
+  outline: none;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.game-over {
+  color: rgb(190, 2, 2);
+  display: none;
+  font-size: 3rem;
+}
+.trophy {
+  font-size: 8rem;
+}
+.you-win {
+  display: none;
+}
+.rollup {
+  top: -100vh;
+}
+.disappear {
+  display: none;
+}
+.appear {
+  display: block;
+}
+.rolldown {
+  top: 0;
+}
+@media screen and (max-width: 800px) {
+  .section-container {
+    width: 95%;
+  }
+  .imgs {
+    /* grid-template-columns: repeat(, 1fr); */
+    width: 100%;
+  }
+  .imgs img {
+    max-width: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    max-height: 80px;
+  }
+  .imgs {
+    height: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .imgs img {
+    max-width: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    max-height: 70px;
+  }
+  .imgs {
+    height: 50%;
+  }
+  .game,
+  .you-win {
+    width: 80%;
+    font-size: 1.3rem;
+    color: lightgray;
+  }
+  .game-over {
+    width: 80%;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .imgs img {
+    max-width: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
+  }
+  .imgs {
+    height: 50%;
+  }
+  .game-over {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .imgs img {
+    max-width: 55px;
+    min-width: 55px;
+    min-height: 55px;
+    max-height: 55px;
+  }
+  .imgs {
+    height: 50%;
+  }
+}
