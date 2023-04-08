@@ -138,15 +138,16 @@ const game = {
     //create cards
     function createImage() {
       for (let i = 0; i < imgSrcs.length; i++) {
-        let image = document.createElement("img");
-        image.src = "images/assets/about04.png";
+        let image = document.createElement("div");
+        image.className = 'img'
+        image.style.backgroundImage = "url(images/assets/about04.png)";
         image.setAttribute("data-id", i);
         imgs.append(image);
       }
     }
 
     function startGame() {
-      let boards = document.querySelectorAll("img");
+      let boards = document.querySelectorAll(".img");
       let dataIds = [];
       let displayNone = [];
       boards.forEach((board, Bindex) => {
@@ -158,14 +159,14 @@ const game = {
           }
           imgSrcs.forEach(function (item, Imgindex) {
             if (Bindex == Imgindex) {
-              //show image when card is clicked
-              board.src = imgSrcs[Imgindex];
+              //show image when card is clicked        image.style.backgroundImage = "url(images/assets/about04.png)";
+              board.style.backgroundImage = `url(${imgSrcs[Imgindex]})`;
               //check if two clicks are made
               if (dataIds.length == 2) {
                 //check if clicked items' data-ids are not equal but their srcs are
                 if (
                   boards[dataIds[0]] != boards[dataIds[1]] &&
-                  boards[dataIds[0]].src === boards[dataIds[1]].src
+                  boards[dataIds[0]].style.backgroundImage === boards[dataIds[1]].style.backgroundImage
                 ) {
                   //if clicks are equal add 'display: none' to both card(s)
                   setTimeout(() => {
@@ -190,8 +191,8 @@ const game = {
                 //if clicked items are not equal set them back to way they were
                 else {
                   setTimeout(() => {
-                    boards[dataIds[0]].src = "images/assets/about04.png";
-                    boards[dataIds[1]].src = "images/assets/about04.png";
+                    boards[dataIds[0]].style.backgroundImage = "url(images/assets/about04.png)";
+                    boards[dataIds[1]].style.backgroundImage = "url(images/assets/about04.png)";
                   }, 500);
                 }
               }
