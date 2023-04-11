@@ -186,14 +186,14 @@ const game = {
                       clearInterval(counter);
                       totalScore.textContent = `Score: ${score.textContent}`;
                     }
-                  }, 500);
+                  }, 300);
                 }
                 //if clicked items are not equal set them back to way they were
                 else {
                   setTimeout(() => {
                     boards[dataIds[0]].style.backgroundImage = "url(images/assets/about04.png)";
                     boards[dataIds[1]].style.backgroundImage = "url(images/assets/about04.png)";
-                  }, 500);
+                  }, 300);
                 }
               }
             }
